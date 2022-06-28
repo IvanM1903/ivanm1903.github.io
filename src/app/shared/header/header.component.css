@@ -1,0 +1,80 @@
+:host *{
+    font-family: 'SF Mono Regular';
+    font-size: 0.8rem;
+    color: var(--text-light-color) !important;
+}
+.navbar{
+    background-color: var(--primary-bg) !important;
+    transition: top 0.2s;
+    height: var(--header-height) !important;
+}
+
+.btn {
+    background-color: transparent;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 0rem 1rem;
+}
+
+.nav-link:hover{
+    color: var(--text-vibrant-color) !important;
+}
+
+#menu-icon{
+    font-size: 2rem !important;
+}
+
+.btn-close{
+    filter: invert();
+    margin: 2rem 1rem;
+    font-size: 1.1rem;
+}
+
+.toggle-margin{
+    margin-left: auto !important;
+}
+
+.number-link{
+    color: var(--text-vibrant-color) !important;
+}
+
+
+/********************
+ @ MEDIA QUERYS
+********************/
+
+@media only screen and (max-width: 1024px) {
+    .offcanvas {
+        background-color: var(--offcanvas-bg) !important;
+        width: 80vw !important;
+    }
+
+    .toggle-margin{
+        margin-top: 0 !important;
+        margin-bottom: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 1rem 1rem;
+    }
+}
+
+@media (orientation: landscape){
+    .nav-link {
+        margin: 0 !important;
+    }
+
+    .offcanvas {
+        width: 50vw !important;
+    }
+}

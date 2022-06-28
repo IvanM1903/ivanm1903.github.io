@@ -1,0 +1,69 @@
+:host * {
+    font-family: 'Inter Regular';
+    color: var(--text-light-color) !important;
+    background-color: var(--primary-bg) !important;
+    z-index: 9999 !important;
+}
+
+#container-footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+#icons-container {
+    font-size: 1.7rem;
+}
+
+#icons-container a {
+    margin-bottom: 1.5vh;
+    transition: ease-in-out 0.15s;
+}
+
+#icons-container a:hover {
+    transform: translateY(-0.5vh);
+}
+
+.vertical-line {
+    width: 2px;
+
+    margin-left: 1.30vh;
+    /* Line width */
+    background-color: white !important;
+    height: 10vh;
+    display: inline-block;
+}
+
+
+
+/********************
+ @ MEDIA QUERYS
+********************/
+
+@media only screen and (max-width: 1024px) {
+    
+    #container-footer{
+         display: none;
+    }
+
+    #icons-container{
+        width: 100vw;
+        flex-direction: row !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+    }
+
+    #icons-container a{
+        font-size: 1.3rem;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    
+}

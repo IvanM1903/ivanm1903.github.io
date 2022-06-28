@@ -1,0 +1,53 @@
+:host *{
+    font-family: 'Inter Regular';
+    color: var(--text-light-color) !important;
+}
+
+.container-fluid{
+    margin-top: var(--header-height) !important;
+    background-color: var(--primary-bg) !important;
+}
+
+.container{
+    height: calc(100vh - var(--header-height));
+}
+
+.vibrant-text{
+    font-family: 'SF Mono Regular';
+    color: var(--text-vibrant-color) !important;
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.short-text{
+    color: var(--text-muted-color) !important;
+    font-size: 4.5rem;
+}
+
+#name-container{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+
+#text-container{
+    font-size: 1.2rem;
+    color: var(--text-muted-color) !important;
+    margin-bottom: 5vh !important;
+}
+
+/********************
+ @ MEDIA QUERYS
+********************/
+
+@media only screen and (max-width: 768px) {
+    h1, .short-text{
+        font-size: 3rem;
+    }
+
+    #text-container{
+        font-size: 1rem;
+    }
+}

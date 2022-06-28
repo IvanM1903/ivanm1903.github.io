@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --offcanvas-bg: #172A45;
+    --primary-bg: #0A192F;
+    --text-vibrant-color: #64ffda;
+    --text-light-color: #CCD6F6;
+    --text-muted-color: #bbc4e2a0;
+    --header-height: 7vh;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: var(--primary-bg) !important;
+    /* height: 200vh; */
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'SF Mono Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF Mono Regular'), url('assets/fonts/SFMonoRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Inter Regular'), url('assets/fonts/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Quantico Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Quantico Regular'), url('assets/fonts/Quantico-Regular.ttf') format('ttf');
+}
