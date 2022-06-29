@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
       }
     } else {
       if (navbar) {
-        navbar.style.top = "-50px";
+        navbar.style.top = "-88px";
       }
     }
     this.prevScrollpos = currentScrollPos;

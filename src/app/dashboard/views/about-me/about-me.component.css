@@ -1,0 +1,48 @@
+:host * {
+    font-family: 'Inter Regular';
+    color: var(--text-light-color) !important;
+}
+
+#content{
+    margin-top: var(--header-height) !important;
+}
+
+#number-section {
+    font-family: 'SF Mono Regular';
+    color: var(--text-vibrant-color) !important;
+    font-size: larger;
+    font-weight: normal !important;
+}
+
+#section-title {
+    font-weight: 600;
+    display: inline-block;
+}
+
+#section-title::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 25vw;
+    background-color: var(--lines-color);
+    margin-left: 17vw;
+    position: relative;
+    top: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #section-title::after{
+        margin-left: 45vw;
+    }
+
+    #content{
+        margin-top: 0 !important;
+    }
+}
+
+@media (orientation: landscape){
+    #section-title::after{
+        margin-left: auto;
+    }
+}

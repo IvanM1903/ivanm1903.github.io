@@ -1,7 +1,6 @@
 :host * {
     font-family: 'Inter Regular';
     color: var(--text-light-color) !important;
-    background-color: var(--primary-bg) !important;
     z-index: 9999 !important;
 }
 
@@ -9,32 +8,42 @@
     position: fixed;
     bottom: 0;
     z-index: 9999;
-    width: 100%;
+    width: 100vw;
+    background-color: transparent !important;
 }
 
 #icons-container {
     font-size: 1.7rem;
+    background-color: transparent !important;
 }
 
 #icons-container a {
     margin-bottom: 1.5vh;
     transition: ease-in-out 0.15s;
+    background-color: transparent !important;
 }
 
 #icons-container a:hover {
     transform: translateY(-0.5vh);
 }
+#icons-container a > i:hover{
+    color: var(--text-vibrant-color) !important;
+}
 
 .vertical-line {
     width: 2px;
-
-    margin-left: 1.30vh;
+    margin-left: 98.6%;
     /* Line width */
     background-color: white !important;
     height: 10vh;
     display: inline-block;
 }
 
+#footer-text{
+    font-family: 'SF Mono Regular';
+    font-size: small;
+    padding-top: 5vh;
+}
 
 
 /********************
@@ -44,11 +53,14 @@
 @media only screen and (max-width: 1024px) {
     
     #container-footer{
-         display: none;
+        position: relative;
+         width: auto;
+         margin: 0 !important;
+        padding: 0 !important;
+        background-color: var(--primary-bg) !important;
     }
 
     #icons-container{
-        width: 100vw;
         flex-direction: row !important;
         justify-content: space-evenly !important;
         align-items: center !important;

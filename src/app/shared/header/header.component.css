@@ -3,10 +3,20 @@
     font-size: 0.8rem;
     color: var(--text-light-color) !important;
 }
+
+#logo{
+    width: 65px;
+    filter: invert();
+}
+
+.navbar-brand{
+    height: 100%;
+}
+
 .navbar{
     background-color: var(--primary-bg) !important;
     transition: top 0.2s;
-    height: var(--header-height) !important;
+    height: var(--header-height) !important; 
 }
 
 .btn {

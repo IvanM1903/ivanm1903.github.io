@@ -1,40 +1,62 @@
-:host *{
+:host * {
     font-family: 'Inter Regular';
     color: var(--text-light-color) !important;
 }
 
-.container-fluid{
+.container-fluid {
     margin-top: var(--header-height) !important;
     background-color: var(--primary-bg) !important;
 }
 
-.container{
-    height: calc(100vh - var(--header-height));
+.container {
+    min-height: 100vh;
+    margin-top: var(--header-height) !important;
 }
 
-.vibrant-text{
+.vibrant-text {
     font-family: 'SF Mono Regular';
     color: var(--text-vibrant-color) !important;
 }
 
-h1{
+h1 {
     font-size: 5rem;
     font-weight: 600;
 }
 
-.short-text{
+.short-text {
     color: var(--text-muted-color) !important;
     font-size: 4.5rem;
 }
 
-#name-container{
+#current-work {
+    display: inline-block;
+}
+
+#current-work:hover {
+    cursor: pointer;
+}
+
+#current-work::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--text-vibrant-color);
+    transition: 300ms;
+}
+
+#current-work:hover::after {
+    width: 100%;
+}
+
+#name-container {
     margin-top: 20vh;
     margin-bottom: 5vh;
 }
 
-#text-container{
-    font-size: 1.2rem;
-    color: var(--text-muted-color) !important;
+#text-container {
+    font-size: 1rem;
+    color: var(--text-not-muted-color) !important;
     margin-bottom: 5vh !important;
 }
 
@@ -43,11 +65,17 @@ h1{
 ********************/
 
 @media only screen and (max-width: 768px) {
-    h1, .short-text{
+
+    h1,
+    .short-text {
         font-size: 3rem;
     }
 
-    #text-container{
+    #name-container{
+         margin-top: 13vh; 
+    }
+
+    #text-container {
         font-size: 1rem;
     }
 }

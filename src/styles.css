@@ -4,14 +4,20 @@
     --primary-bg: #0A192F;
     --text-vibrant-color: #64ffda;
     --text-light-color: #CCD6F6;
+    --text-not-muted-color: #bbc4e2bc;
     --text-muted-color: #bbc4e2a0;
-    --header-height: 7vh;
+    --lines-color: #303c55;
+    --header-height: 87.8594px;
+    --overflow-header: 5vh;
     scroll-behavior: smooth;
+}
+
+:target{
+    scroll-margin-top: var(--header-height);
 }
 
 html {
     background-color: var(--primary-bg) !important;
-    /* height: 200vh; */
     margin: 0;
 }
 
