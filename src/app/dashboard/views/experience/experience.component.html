@@ -1,12 +1,41 @@
-<div class="container-fluid d-flex flex-column justify-content-start" id="content">
-    <h4 id="section-title" class="text-lg-end me-5">
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center" id="content">
+    <h4 id="section-title" class="text-center me-5">
         <span id="number-section">02.</span>
         <span>Where I've worked</span>
     </h4>
 
-    <p class="d-flex flex-column justify-content-center align-items-center fs-4 mt-auto mb-auto">
-        <span class="pb-3">Unfinished section..</span>
-        <i class="fa-solid fa-cog fa-spin"></i>
-        <span class="pt-3">Webpage under devlopment.</span>
-    </p>
+    <div class="d-flex flex-lg-row flex-column mt-5">
+        <ul class="list-group list-group-flush col-lg-3 col-12 me-5 mb-lg-0 mb-5">
+            <li class="list-group-item list-item-clicked" id="deimos" (click)="onClickListEvent($event)">
+                <i class="fa-solid fa-rocket"></i>&nbsp;Deimos Space
+            </li>
+            <li class="list-group-item" id="accenture" (click)="onClickListEvent($event)">
+                <i class="fa-solid fa-angle-right"></i>&nbsp;Accenture
+            </li>
+        </ul>
+        <div class="col-lg-7 ms-lg-5 col-12">
+            <div [hidden]="listItemSelected!=='deimos'">
+                <p class="fw-bold">Full Stack Developer &nbsp; <br class="d-lg-none"><span class="vibrant-text">@Deimos Space</span></p>
+                <p class="time-experience">January 2022 - Present</p>
+                <div>
+                    <ul id="resume-experience">
+                        <li data-icon="🔸">Frontend development using the Angular framework and libraries with reactive behavior such as RxJS.</li>
+                        <li data-icon="🔸">Development of backend functionalities using the Spring Java framework, and its subsequent deployment using Docker.</li>
+                        <li data-icon="🔸">Resolution of bugs and problems related to the frontend and backend services.</li>
+                    </ul>
+                </div>
+            </div>
+            <div [hidden]="listItemSelected!=='accenture'">
+                <p class="fw-bold">Cloud Support Engineer Intern &nbsp;<br class="d-lg-none"><span class="vibrant-text">@Accenture</span></p>
+                <p class="time-experience">July 2021 - December 2021</p>
+                <div>
+                    <ul id="resume-experience">
+                        <li data-icon="🔹">Responsible for automating tasks in cloud infrastructures through Azure and Ansible.</li>
+                        <li data-icon="🔹">Automation scripts to improve the behavior of a network.</li>
+                        <li data-icon="🔹">Development of interactive scripts to collect massive information from customer databases.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

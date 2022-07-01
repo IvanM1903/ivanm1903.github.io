@@ -4,7 +4,7 @@
     --primary-bg: #0A192F;
     --text-vibrant-color: #64ffda;
     --text-light-color: #CCD6F6;
-    --text-not-muted-color: #bbc4e2bc;
+    --text-not-muted-color: #bbc4e2c5;
     --text-muted-color: #bbc4e2a0;
     --lines-color: #303c55;
     --header-height: 87.8594px;
@@ -19,6 +19,11 @@
 html {
     background-color: var(--primary-bg) !important;
     margin: 0;
+}
+
+.vibrant-text {
+    font-family: 'SF Mono Regular' !important;
+    color: var(--text-vibrant-color) !important;
 }
 
 @font-face {

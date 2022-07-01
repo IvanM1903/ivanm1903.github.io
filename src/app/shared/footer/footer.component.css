@@ -7,8 +7,10 @@
 #container-footer {
     position: fixed;
     bottom: 0;
-    z-index: 9999;
-    width: 100vw;
+    left: auto;
+    right: 2vw;
+    z-index: 10;
+    width: fit-content;
     background-color: transparent !important;
 }
 
@@ -62,8 +64,8 @@
 @media only screen and (max-width: 1024px) {
 
     #container-footer {
-        position: relative;
-        width: auto;
+        position: initial;
+        width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
         z-index: 0 !important;

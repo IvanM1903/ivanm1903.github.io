@@ -35,11 +35,6 @@
     color: var(--text-not-muted-color) !important;
 }
 
-.vibrant-text {
-    font-family: 'SF Mono Regular' !important;
-    color: var(--text-vibrant-color) !important;
-}
-
 #studies {
     display: inline-block;
 }
@@ -138,24 +133,24 @@
     color: white !important;
 }
 
-ul {
+:host ul {
     list-style: none;
     padding: 0;
 }
 
-ul li {
+:host ul li {
     margin-top: 10px;
 }
 
-ul li span {
+:host ul li span {
     color: var(--text-not-muted-color);
 }
 
-ul li i {
+:host ul li i {
     color: var(--text-light-color);
 }
 
-ul li:first-child {
+:host ul li:first-child {
     margin-top: 0;
 }
 
