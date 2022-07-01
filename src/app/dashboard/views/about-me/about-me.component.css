@@ -3,15 +3,15 @@
     color: var(--text-light-color);
 }
 
-#content {
-    /* margin-top: var(--header-height) !important; */
-}
-
 #number-section {
     font-family: 'SF Mono Regular';
     color: var(--text-vibrant-color) !important;
     font-size: larger;
     font-weight: normal !important;
+}
+
+#content{
+    margin-bottom: var(--header-height);
 }
 
 #section-title {

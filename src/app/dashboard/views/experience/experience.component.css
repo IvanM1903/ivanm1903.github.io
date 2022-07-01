@@ -1,0 +1,38 @@
+:host *:not(i) {
+    font-family: 'Inter Regular';
+    color: var(--text-light-color);
+}
+
+#content{
+    height: 50vh;
+}
+
+#number-section {
+    font-family: 'SF Mono Regular';
+    color: var(--text-vibrant-color) !important;
+    font-size: larger;
+    font-weight: normal !important;
+}
+
+#section-title {
+    font-weight: 600;
+    display: inline-block;
+}
+
+#section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 25vw;
+    background-color: var(--lines-color);
+    margin-left: right;
+    position: relative;
+    top: -15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #section-title::after{
+        display: none;
+    }
+}
