@@ -64,13 +64,18 @@
     min-height: 100vh !important;
 }
 
+#content-experience{
+    width: 100%;
+}
 .time-experience{
     color: var(--text-muted-color) !important;
     font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 768px) {
-
+    #content{
+        justify-content: center !important;
+    }
 }
 
 @media (orientation: landscape) {
