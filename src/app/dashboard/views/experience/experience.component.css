@@ -61,11 +61,12 @@
 }
 
 #content{
-    min-height: 100vh !important;
+    min-height: 80vh !important;
 }
 
 #content-experience{
     width: 100%;
+    margin-top: 20vh !important;
 }
 .time-experience{
     color: var(--text-muted-color) !important;
@@ -74,7 +75,11 @@
 
 @media only screen and (max-width: 768px) {
     #content{
-        justify-content: center !important;
+        justify-content: start !important;
+        min-height: 100vh !important;
+    }
+    #content-experience{
+        margin-top: 10vh !important;
     }
 }
 

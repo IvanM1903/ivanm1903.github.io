@@ -1,0 +1,32 @@
+:host *:not(i) {
+    font-family: 'Inter Regular';
+    color: var(--text-light-color);
+}
+
+#number-section {
+    font-family: 'SF Mono Regular';
+    color: var(--text-vibrant-color) !important;
+    font-size: larger;
+    font-weight: normal !important;
+}
+
+#content{
+    margin-bottom: var(--header-height);
+    min-height: 80vh !important;
+}
+
+#section-title {
+    font-weight: 600;
+    display: inline-block;
+}
+
+#section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 25vw;
+    background-color: var(--lines-color);
+    margin-left: auto;
+    position: relative;
+    top: -15px;
+}

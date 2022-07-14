@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AboutMeComponent } from './dashboard/views/about-me/about-me.component';
 import { ExperienceComponent } from './dashboard/views/experience/experience.component';
+import { ProjectsComponent } from './dashboard/views/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ExperienceComponent } from './dashboard/views/experience/experience.com
     FooterComponent,
     DashboardComponent,
     AboutMeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

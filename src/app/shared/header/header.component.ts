@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @HostListener('window:scroll', ['$event']) // for window scroll events
+  /* @HostListener('window:scroll', ['$event']) // for window scroll events
   onScroll(event: any) {
     const currentScrollPos = window.pageYOffset;
     const navbar = document.getElementById("navbar");
@@ -29,6 +29,6 @@ export class HeaderComponent implements OnInit {
       }
     }
     this.prevScrollpos = currentScrollPos;
-  }
+  } */
 }
 
