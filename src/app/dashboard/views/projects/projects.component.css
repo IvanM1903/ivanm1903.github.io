@@ -1,0 +1,93 @@
+:host *:not(i) {
+    font-family: 'Inter Regular';
+    color: var(--text-light-color);
+}
+
+#number-section {
+    font-family: 'SF Mono Regular';
+    color: var(--text-vibrant-color) !important;
+    font-size: larger;
+    font-weight: normal !important;
+}
+
+#content{
+    margin-bottom: var(--header-height);
+    min-height: 80vh !important;
+}
+
+#section-title {
+    font-weight: 600;
+    display: inline-block;
+}
+
+#section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 25vw;
+    background-color: var(--lines-color);
+    margin-left: auto;
+    position: relative;
+    top: -15px;
+}
+
+.repo-card{
+    width: 25vw;
+    transition: ease-out 0.2s;
+    border-radius: 6px;
+}
+.repo-card:hover{
+    transform: translate(5px, -5px);
+    box-shadow: -5px 5px var(--text-vibrant-color);
+}
+
+.card-row{
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .repo-card{
+        width: 80vw;
+    }
+    
+    #git-cards div:first-child{
+        margin-top: 0 !important;
+    }
+    
+    #git-cards div{
+        margin-top: 4vh !important;
+    }
+    
+    .card-row{
+        width: 95% !important;
+    }
+
+    .carousel-inner{
+        height:auto !important;/* 
+        min-height: 100vh !important; */
+    } 
+
+    .carousel-control-next, .carousel-control-prev{
+        display: none;
+    }
+
+    .carousel-indicators{
+        margin-bottom: -1rem;
+    }
+}
+
+:host ::ng-deep .carousel-control-next{
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+:host ::ng-deep .carousel-control-prev{
+    justify-content: flex-start;
+    width: fit-content;
+}
+.carousel-inner{
+    height: 50vh;
+}

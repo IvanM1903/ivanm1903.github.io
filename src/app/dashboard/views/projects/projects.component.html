@@ -1,0 +1,86 @@
+<div class="container-fluid d-flex flex-column justify-content-start" id="content">
+    <h4 id="section-title">
+        <span id="number-section">03.</span>
+        <span>My projects</span>
+    </h4>
+    <div class="d-flex flex-column mt-5">
+        <p>
+            Here are my most <span class="vibrant-text">outstanding projects</span> in which I have participated during
+            my years at the University.
+        </p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button> -->
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="15000">
+                    <div class="d-flex flex-column card-row">
+                        <app-project-card [title]="PCE.GALAGA_TITLE" [text]="PCE.GALAGA_TEXT"></app-project-card>
+                        <app-project-card [title]="PCE.OPENMP_TITLE" [text]="PCE.OPENMP_TEXT"></app-project-card>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="d-flex flex-column card-row">
+                        <app-project-card [title]="PCE.DISTRIBUTED_SYS_TITLE" [text]="PCE.DISTRIBUTED_SYS_TEXT">
+                        </app-project-card>
+                        <app-project-card [title]="PCE.OPERATIVE_SYSTEM_DESIGN_TITLE"
+                            [text]="PCE.OPERATIVE_SYSTEM_DESIGN_TEXT"></app-project-card>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="d-flex flex-column card-row">
+                        <app-project-card [title]="PCE.CRACKING_PASS_TITLE" [text]="PCE.CRACKING_PASS_TEXT">
+                        </app-project-card>
+                        <app-project-card [title]="PCE.MOBILE_FORENSIC_TITLE" [text]="PCE.MOBILE_FORENSIC_TEXT">
+                        </app-project-card>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="d-flex flex-column card-row">
+                        <app-project-card [title]="PCE.AUDIT_NETWORK_TITLE" [text]="PCE.AUDIT_NETWORK_TEXT">
+                        </app-project-card>
+                        <app-project-card [title]="PCE.TIW_TITLE" [text]="PCE.TIW_TEXT"></app-project-card>
+                    </div>
+                </div>
+                <!-- <div class="carousel-item">
+                    <div class="d-flex flex-column card-row">
+                        <app-project-card [title]="PCE.NAS_ENVIRONMENT_TITLE" [text]="PCE.NAS_ENVIRONMENT_TEXT">
+                        </app-project-card>
+                        <app-project-card [title]="PCE.MORE_TITLE" [text]="PCE.MORE_TEXT + '&#9203;'">
+                        </app-project-card>
+                    </div>
+                </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <p class="mt-lg-0 mt-5">
+            You can find my <span class="vibrant-text">github repositories</span> from those that are publicly
+            available.
+        </p>
+        <div class="d-flex flex-lg-row flex-column justify-content-evenly" id="git-cards">
+            <div class="repo-card" data-repo="IvanM1903/ivanm1903.github.io" data-theme="dark-theme"></div>
+            <div class="repo-card" data-repo="IvanM1903/dotfiles" data-theme="dark-theme"></div>
+        </div>
+
+    </div>
+</div>
