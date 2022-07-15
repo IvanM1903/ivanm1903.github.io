@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ProjectContentEnum } from 'src/app/dashboard/views/projects/utils/project-content.enum'
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  public PCE = ProjectContentEnum;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
