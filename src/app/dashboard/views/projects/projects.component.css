@@ -47,6 +47,28 @@
     margin-right: auto;
 }
 
+#modalCardCarousel{
+    background-color: var(--card-bg) !important;
+}
+
+#modalCardCarousel .modal-content{
+    padding: 10px !important;
+    background-color: var(--primary-bg) !important;
+    border: 2px solid var(--offcanvas-bg) !important;
+    box-shadow: 0px 10px 30px 0px var(--card-bg);
+}
+
+#modalCardCarousel .modal-title{
+    font-family: 'SF Mono Regular' !important;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem !important;
+    color: var(--text-vibrant-color) !important;
+}
+
+#modalCardCarousel .modal-header{
+    border-color: var(--lines-color) !important;
+}
 
 @media only screen and (max-width: 768px) {
     .repo-card{

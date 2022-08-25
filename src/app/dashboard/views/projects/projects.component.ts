@@ -8,6 +8,9 @@ import { ProjectContentEnum } from 'src/app/dashboard/views/projects/utils/proje
 export class ProjectsComponent implements OnInit {
 
   public PCE = ProjectContentEnum;
+  public modalCardTitle = '';
+  public modalCardText = '';
+  public modalCardRoute = '';
 
   constructor() {
   }
@@ -15,4 +18,10 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openModalCard(title: string, text: string) {
+    this.modalCardTitle = title;
+    this.modalCardText = text;
+    
+    document.getElementById("openCardCarouselModal")?.click();
+  }
 }

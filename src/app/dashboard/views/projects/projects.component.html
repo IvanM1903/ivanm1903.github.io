@@ -25,41 +25,42 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="15000">
                     <div class="d-flex flex-column card-row">
-                        <app-project-card [title]="PCE.GALAGA_TITLE" [text]="PCE.GALAGA_TEXT"></app-project-card>
-                        <app-project-card [title]="PCE.OPENMP_TITLE" [text]="PCE.OPENMP_TEXT"></app-project-card>
+                        <app-project-card (click)="openModalCard(PCE.GALAGA_TITLE, PCE.GALAGA_TEXT)"
+                            [title]="PCE.GALAGA_TITLE" [text]="PCE.GALAGA_TEXT"></app-project-card>
+                        <app-project-card (click)="openModalCard(PCE.OPENMP_TITLE, PCE.OPENMP_TEXT)"
+                            [title]="PCE.OPENMP_TITLE" [text]="PCE.OPENMP_TEXT"></app-project-card>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="15000">
                     <div class="d-flex flex-column card-row">
-                        <app-project-card [title]="PCE.DISTRIBUTED_SYS_TITLE" [text]="PCE.DISTRIBUTED_SYS_TEXT">
+                        <app-project-card (click)="openModalCard(PCE.DISTRIBUTED_SYS_TITLE, PCE.DISTRIBUTED_SYS_TEXT)"
+                            [title]="PCE.DISTRIBUTED_SYS_TITLE" [text]="PCE.DISTRIBUTED_SYS_TEXT">
                         </app-project-card>
-                        <app-project-card [title]="PCE.OPERATIVE_SYSTEM_DESIGN_TITLE"
-                            [text]="PCE.OPERATIVE_SYSTEM_DESIGN_TEXT"></app-project-card>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="15000">
-                    <div class="d-flex flex-column card-row">
-                        <app-project-card [title]="PCE.CRACKING_PASS_TITLE" [text]="PCE.CRACKING_PASS_TEXT">
-                        </app-project-card>
-                        <app-project-card [title]="PCE.MOBILE_FORENSIC_TITLE" [text]="PCE.MOBILE_FORENSIC_TEXT">
+                        <app-project-card
+                            (click)="openModalCard(PCE.OPERATIVE_SYSTEM_DESIGN_TITLE, PCE.OPERATIVE_SYSTEM_DESIGN_TEXT)"
+                            [title]="PCE.OPERATIVE_SYSTEM_DESIGN_TITLE" [text]="PCE.OPERATIVE_SYSTEM_DESIGN_TEXT">
                         </app-project-card>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="15000">
                     <div class="d-flex flex-column card-row">
-                        <app-project-card [title]="PCE.AUDIT_NETWORK_TITLE" [text]="PCE.AUDIT_NETWORK_TEXT">
+                        <app-project-card (click)="openModalCard(PCE.CRACKING_PASS_TITLE, PCE.CRACKING_PASS_TEXT)"
+                            [title]="PCE.CRACKING_PASS_TITLE" [text]="PCE.CRACKING_PASS_TEXT">
                         </app-project-card>
-                        <app-project-card [title]="PCE.TIW_TITLE" [text]="PCE.TIW_TEXT"></app-project-card>
+                        <app-project-card (click)="openModalCard(PCE.MOBILE_FORENSIC_TITLE, PCE.MOBILE_FORENSIC_TEXT)"
+                            [title]="PCE.MOBILE_FORENSIC_TITLE" [text]="PCE.MOBILE_FORENSIC_TEXT">
+                        </app-project-card>
                     </div>
                 </div>
-                <!-- <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="15000">
                     <div class="d-flex flex-column card-row">
-                        <app-project-card [title]="PCE.NAS_ENVIRONMENT_TITLE" [text]="PCE.NAS_ENVIRONMENT_TEXT">
+                        <app-project-card (click)="openModalCard(PCE.AUDIT_NETWORK_TITLE, PCE.AUDIT_NETWORK_TEXT)"
+                            [title]="PCE.AUDIT_NETWORK_TITLE" [text]="PCE.AUDIT_NETWORK_TEXT">
                         </app-project-card>
-                        <app-project-card [title]="PCE.MORE_TITLE" [text]="PCE.MORE_TEXT + '&#9203;'">
-                        </app-project-card>
+                        <app-project-card (click)="openModalCard(PCE.TIW_TITLE, PCE.TIW_TEXT)" [title]="PCE.TIW_TITLE"
+                            [text]="PCE.TIW_TEXT"></app-project-card>
                     </div>
-                </div> -->
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
@@ -77,10 +78,85 @@
             You can find my <span class="vibrant-text">github repositories</span> from those that are publicly
             available.
         </p>
-        <div class="d-flex flex-lg-row flex-column justify-content-evenly" id="git-cards">
-            <div class="repo-card" data-repo="IvanM1903/ivanm1903.github.io" data-theme="dark-theme"></div>
-            <div class="repo-card" data-repo="IvanM1903/dotfiles" data-theme="dark-theme"></div>
+        <div class="d-flex mt-lg-0 mt-5 flex-lg-row flex-column justify-content-evenly" id="git-cards">
+            <div class="repo-card w-75 m-5" data-repo="IvanM1903/ivanm1903.github.io" data-theme="dark-theme"></div>
+            <div class="repo-card w-75 m-5" data-repo="IvanM1903/dotfiles" data-theme="dark-theme"></div>
         </div>
+    </div>
+</div>
 
+
+<!-- MODAL CARD CAROUSEL -->
+<button id="openCardCarouselModal" type="button" class="btn btn-primary d-none" data-bs-toggle="modal"
+    data-bs-target="#modalCardCarousel"></button>
+
+<div class="modal fade" id="modalCardCarousel" tabindex="-1" aria-labelledby="modalCardCarouselLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalCardCarouselLabel">{{modalCardTitle}}</h5>
+            </div>
+            <div class="modal-body text-center d-flex flex-column">
+                {{modalCardText}}
+                <div *ngIf="modalCardTitle === PCE.GALAGA_TITLE"
+                    class="mt-4 d-flex flex-row justify-content-evenly align-items-center">
+                    <img class="w-25" src="../../../../assets/images/projects/galaga/galaga1.png"
+                        alt="Project image description" />
+                    <img class="w-25" src="../../../../assets/images/projects/galaga/galaga2.png"
+                        alt="Project image description" />
+                    <img class="w-25" src="../../../../assets/images/projects/galaga/galaga3.png"
+                        alt="Project image description" />
+                </div>
+                <div *ngIf="modalCardTitle === PCE.OPENMP_TITLE"
+                    class="mt-4 d-flex flex-row justify-content-evenly align-items-center">
+                    <img class="w-25" src="../../../../assets/images/projects/openmp/balloon1.png"
+                        alt="Project image description" />
+                    <img class="w-25" src="../../../../assets/images/projects/openmp/balloon2.png"
+                        alt="Project image description" />
+                </div>
+                <div *ngIf="modalCardTitle === PCE.OPERATIVE_SYSTEM_DESIGN_TITLE"
+                    class="mt-4 d-flex flex-row justify-content-evenly align-items-center">
+                    <img class="w-50" src="../../../../assets/images/projects/iot/web-iot.png"
+                        alt="Project image description" />
+                </div>
+                <div *ngIf="modalCardTitle === PCE.CRACKING_PASS_TITLE"
+                    class="mt-4 d-flex flex-row justify-content-evenly align-items-center">
+                    <img class="w-75" src="../../../../assets/images/projects/cracking/passwords.png"
+                        alt="Project image description" />
+                </div>
+                <div *ngIf="modalCardTitle === PCE.AUDIT_NETWORK_TITLE"
+                    class="mt-4 d-flex flex-column justify-content-evenly align-items-center">
+                    <img class="w-75 p-3" src="../../../../assets/images/projects/vulnerability/exploit1.png"
+                        alt="Project image description" />
+                    <img class="w-75 p-3" src="../../../../assets/images/projects/vulnerability/exploit2.png"
+                        alt="Project image description" />
+                    <img class="w-75 p-3" src="../../../../assets/images/projects/vulnerability/exploit3.png"
+                        alt="Project image description" />
+                </div>
+                <div *ngIf="modalCardTitle === PCE.MOBILE_FORENSIC_TITLE"
+                    class="mt-4 d-flex flex-column justify-content-evenly align-items-center">
+                    <img class="w-75 p-3" src="../../../../assets/images/projects/forensic/forensic1.png"
+                        alt="Project image description" />
+                    <img class="w-75 p-3" src="../../../../assets/images/projects/forensic/forensic2.png"
+                        alt="Project image description" />
+                </div>
+                <div class="mt-4" *ngIf="modalCardTitle === PCE.GALAGA_TITLE">
+                    Written in <span class="vibrant-text">Java</span>
+                </div>
+                <div class="mt-4" *ngIf="modalCardTitle === PCE.OPENMP_TITLE">
+                    Written in <span class="vibrant-text">C++</span>
+                </div>
+                <div class="mt-4" *ngIf="modalCardTitle === PCE.OPERATIVE_SYSTEM_DESIGN_TITLE">
+                    Written in <span class="vibrant-text">Python,Docker</span> and<span class="vibrant-text "> MySQL</span>
+                </div>
+                <div class="mt-4" *ngIf="modalCardTitle === PCE.DISTRIBUTED_SYS_TITLE">
+                    Written in <span class="vibrant-text">C</span> and<span class="vibrant-text "> Java</span>
+                </div>
+                <div class="mt-4" *ngIf="modalCardTitle === PCE.TIW_TITLE">
+                    Written in <span class="vibrant-text">Java,MySQL</span> and<span class="vibrant-text "> Thymeleaf</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
