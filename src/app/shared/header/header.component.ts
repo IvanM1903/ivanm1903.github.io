@@ -30,5 +30,9 @@ export class HeaderComponent implements OnInit {
     }
     this.prevScrollpos = currentScrollPos;
   } */
+
+  openCVModal(){
+    document.getElementById('cvModalBtn')?.click();
+  }
 }
 
