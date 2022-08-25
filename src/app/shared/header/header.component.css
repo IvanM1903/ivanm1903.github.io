@@ -107,6 +107,10 @@ object {
     .nav-link {
         margin: 1rem 1rem;
     }
+
+    object {
+        height: 50vh !important;
+    }
 }
 
 @media (orientation: landscape) {
