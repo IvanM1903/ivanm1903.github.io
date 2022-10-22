@@ -6,7 +6,10 @@
 
     <div class="d-flex flex-lg-row flex-column justify-content-between mt-5" id="content-experience">
         <ul class="list-group list-group-flush col-lg-3 col-12 me-5 mb-lg-0 mb-5 text-start">
-            <li class="list-group-item list-item-clicked" id="deimos" (click)="onClickListEvent($event)">
+            <li class="list-group-item list-item-clicked" id="thecodelives" (click)="onClickListEvent($event)">
+                <i class="fa-solid fa-code"></i>&nbsp;TheCodeLives
+            </li>
+            <li class="list-group-item" id="deimos" (click)="onClickListEvent($event)">
                 <i class="fa-solid fa-rocket"></i>&nbsp;Deimos Space
             </li>
             <li class="list-group-item" id="accenture" (click)="onClickListEvent($event)">
@@ -14,6 +17,17 @@
             </li>
         </ul>
         <div class="col-lg-7 ms-lg-5 col-12">
+            <div [hidden]="listItemSelected!=='thecodelives'">
+                <p class="fw-bold">Full Stack Developer &nbsp; <br class="d-lg-none"><span class="vibrant-text">@TheCodeLives</span></p>
+                <p class="time-experience">October 2022 - Actually</p>
+                <div>
+                    <ul id="resume-experience">
+                        <li data-icon="💠">Frontend development using the Angular framework and libraries with reactive behavior such as RxJS and ngRX Store.</li>
+                        <li data-icon="💠">Development of backend functionalities using Python and Node.</li>
+                        <li data-icon="💠">Resolution of bugs and problems related to the frontend and backend services.</li>
+                    </ul>
+                </div>
+            </div>
             <div [hidden]="listItemSelected!=='deimos'">
                 <p class="fw-bold">Full Stack Developer &nbsp; <br class="d-lg-none"><span class="vibrant-text">@Deimos Space</span></p>
                 <p class="time-experience">January 2022 - August 2022</p>

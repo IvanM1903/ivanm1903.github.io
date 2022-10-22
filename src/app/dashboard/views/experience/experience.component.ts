@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  listItemSelected: string = 'deimos';
+  listItemSelected: string = 'thecodelives';
 
   constructor() { }
 
@@ -27,6 +27,7 @@ export class ExperienceComponent implements OnInit {
           event.target.classList.add('list-item-clicked');
           //remove all classes from other elements
           document.getElementById('deimos')?.classList.remove('list-item-clicked');
+          document.getElementById('thecodelives')?.classList.remove('list-item-clicked');
           this.listItemSelected = id;
         }
         break;
@@ -38,6 +39,19 @@ export class ExperienceComponent implements OnInit {
           event.target.classList.add('list-item-clicked');
           //remove all classes from other elements
           document.getElementById('accenture')?.classList.remove('list-item-clicked');
+          document.getElementById('thecodelives')?.classList.remove('list-item-clicked');
+          this.listItemSelected = id;        }
+        break;
+
+        case 'thecodelives':
+        if (element.classList.contains('list-item-clicked')) {
+          /* event.target.classList.remove('list-item-clicked');
+          this.listItemSelected = ''; */
+        } else {
+          event.target.classList.add('list-item-clicked');
+          //remove all classes from other elements
+          document.getElementById('accenture')?.classList.remove('list-item-clicked');
+          document.getElementById('deimos')?.classList.remove('list-item-clicked');
           this.listItemSelected = id;        }
         break;
       default:
