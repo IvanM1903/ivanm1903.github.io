@@ -1,0 +1,45 @@
+<div class="p-7 text-white w-full font-mono flex flex-col h-full overflow-y-scroll">
+    <div class="flex flex-row align-middle items-center">
+        <div class="w-full text-xl justify-self-center">{{node?.content?.title | keyToTitle}}</div>
+        @if(parentNode) {
+            <button class="btn-alternative justify-self-end" (click)="goBack()"> ../ </button>
+        }
+    </div>
+    @if(node?.content?.title === nodeCategories.About_me){
+        <div class="flex flex-col justify-center align-middle items-center gap-3 my-5">
+            <p class=" text-slate-300 text-justify">
+                Hello! My first introduction into the programming world was during high school, in 2017 developing some basic websites with the LAMP stack.
+            </p>
+            <div class=" text-slate-300 text-justify">
+                Later I started <span class="text-white font-bold">Computer Science Engineering</span> at <span class="text-vibrant hover:underline">Universidad Carlos III de Madrid</span> where I have been studying from 2018 until June 2022.
+            </div>
+            <p class=" text-slate-300 text-justify">
+                During these years I have specialized in the <span class="text-white font-bold">Computer Engineering</span> branch where I have learned basic and advanced notions about <span class="text-vibrant">cybersecurity, web and multi-platform development, IoT among others.</span>
+            </p>
+            <p class=" text-slate-300 text-justify">
+                In addition, in 2020 I participated with some of my colleagues in the so-called MEW (Madrid Engineering Week) presenting a <span class="text-vibrant">prototype of Artificial Intelligence to classify people</span>, organized by the University with attending companies such as IBM or Thales among others.
+            </p>
+        </div>
+
+    }
+    
+    @if(node?.content?.title === nodeCategories.Tech_stack) {
+        <div class="flex flex-col justify-center align-middle items-center gap-3 my-5">
+            <p class=" text-slate-300 text-justify">
+                My Tech Stack is designed to enhance <span class="text-vibrant">user experience, ensure scalability, and prioritize security</span>. From frontend to backend, continuous integration to databases, and development tools, each component reflects <span class="text-white font-bold">my commitment to leveraging modern technologies, automation, and robust security practices.</span>
+            </p>
+            <p class=" text-slate-300 text-justify">
+                Together, they enable seamless development and deployment, demonstrating my skills and dedication to delivering <span class="text-vibrant">high-quality projects</span>.
+            </p>
+        </div>
+    }
+
+
+    <div class="flex justify-center items-center align-middle gap-3 flex-wrap mt-auto">
+        @for(item of node?.content?.elements; track $index) {
+            @if(!!item.elements?.length || !item.imageLink) {
+                <button class="btn-alternative" [ngStyle]="{'background-color': item.color}" (click)="sectionSelected(item)">{{item.title | keyToTitle}}</button>
+            }
+        }
+    </div>
+</div>
